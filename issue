@@ -1,0 +1,16 @@
+I have a `@react-navigation/material-top-tabs` with 3 tabs drawn at the bottom of the screen (`tabBarPosition={"bottom"}`).
+
+Swiping is disabled.
+
+The first and the third tabs are lightweight, the second tab contains a [`react-native-qrcode-scanner`](https://www.npmjs.com/package/react-native-qrcode-scanner) instance.
+
+When I switch between tab 1 and tab 3, using the tab bar, the screens change with a terrible lag. I used `react-native-pager-view` to check if it has something to do with the bug, but everything's fine.
+
+`Bug38_PagerView` and `Bug38_TabView` are absolutely the same with the exception that one uses `@react-navigation/material-top-tabs` and the other uses `react-native-pager-view`.
+
+This is the release version of course. The debug version behaves absolutely the same.
+
+https://user-images.githubusercontent.com/6296813/133794876-8b61a0e3-44aa-4c7e-b130-fd14dd7b111b.mp4
+
+
+There's no lag when using `@react-navigation/material-top-tabs`.
